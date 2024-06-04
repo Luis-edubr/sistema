@@ -1,0 +1,95 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.sidebar {
+  width: 0;
+  height: 100vh;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: width 0.3s;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.sidebar-content {
+  display: none;
+  padding: 60px 10px;
+}
+
+.sidebar-content ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar-content ul li {
+  padding: 8px 0;
+}
+
+.sidebar-content ul li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+.sidebar-content ul li a:hover {
+  background-color: #575757;
+}
+
+/* Adiciona cor de highlight ao link ativo */
+.sidebar-content ul li a.active {
+  background-color: #3366ff;
+}
+
+.sidebar.expanded {
+  width: 250px;
+}
+
+.sidebar.expanded .sidebar-content {
+  display: block;
+}
+
+.toggle-button {
+  font-size: 24px;
+  position: fixed;
+  top: 2%;
+  left: 2%;
+  background: none;
+  border: none;
+  color: blue;
+  cursor: pointer;
+  z-index: 100;
+  outline: none;
+}
+
+.content {
+  margin-left: 20px;
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.counter-container {
+  display: flex;
+  align-items: center;
+}
+
+.button-counter {
+  font-size: 0.7rem;
+  margin: 0 1rem;
+  cursor: pointer;
+}
+
+.counter {
+  font-size: 1rem;
+  min-width: 0.6rem;
+  text-align: center;
+}
+
+.venda-produto {
+  display: flex;
+  flex-direction: row;
+}
